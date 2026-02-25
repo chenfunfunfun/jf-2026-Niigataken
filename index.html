@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 遮放の員遊 ✈️ 新潟</title>
+    <title>2026 遮放の員旅 ✈️ 新潟</title>
     
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫣</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
@@ -264,6 +266,73 @@
             display: inline-block;
         }
 
+        /* 自助報到區塊樣式 */
+        .flight-checkin-box {
+            background-color: #f1f8ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 25px;
+            border-left: 4px solid #74c0fc;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .flight-checkin-box h3 {
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            color: #1864ab;
+        }
+
+        .flight-checkin-box .reminder-note {
+            background: #e7f5ff;
+            color: #1864ab;
+            border-left: 3px solid #339af0;
+            display: block;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .checkin-split {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: stretch;
+        }
+
+        .checkin-col {
+            flex: 1;
+            background-color: #fff;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px dashed #74c0fc;
+            font-size: 14.5px;
+        }
+
+        .checkin-col strong {
+            color: #1864ab;
+            display: block;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #d0ebff;
+            padding-bottom: 5px;
+        }
+
+        .checkin-btn {
+            display: block;
+            text-align: center;
+            background-color: #339af0;
+            color: #fff !important;
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.2s;
+            letter-spacing: 1px;
+        }
+
+        .checkin-btn:hover {
+            background-color: #228be6;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -279,13 +348,15 @@
             .activity-split { gap: 8px; }
             .activity-col { padding: 10px; font-size: 14px; }
             .reminder-note { display: block; }
+
+            .checkin-split { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>2026 justfont 員工旅遊 ✈️ 新潟</h1>
+    <h1>2026 遮放の員旅 ✈️ 新潟</h1>
     <p>5 天 4 夜｜4/6 (一) - 4/10 (五)</p>
 </header>
 
@@ -324,6 +395,24 @@
             </div>
             <div class="room-box">
                 <h3>🏨 第一天（單人房*17）</h3>
+            </div>
+            
+            <div class="flight-checkin-box">
+                <h3>✈️ 虎航自助報到資訊 (去程 IT228)</h3>
+                <div class="reminder-note">
+                    💡 <strong>注意事項：</strong>限於航班表定起飛時間前 48 小時至 1 小時內辦理
+                </div>
+                <div class="checkin-split">
+                    <div class="checkin-col">
+                        <strong>🎟️ 訂位代號：CE66SE</strong>
+                        晨、雲山、ㄏㄇ、姜、Mindy、Jason、萱、霞、仙
+                    </div>
+                    <div class="checkin-col">
+                        <strong>🎟️ 訂位代號：DCMYSX</strong>
+                        Ru、弘量、榕、BC、國庭、Mars、麥口
+                    </div>
+                </div>
+                <a href="https://sci.tigerairtw.com/zh-TW/login" target="_blank" class="checkin-btn">🔗 前往虎航自助報到頁面</a>
             </div>
         </div>
     </div>
@@ -449,12 +538,30 @@
             <div class="info-box">
                 🍽️ <strong>餐食：</strong> 早 ⭕ | 午 ✖ | 晚 ✖
             </div>
+            
+            <div class="flight-checkin-box">
+                <h3>✈️ 虎航自助報到資訊 (回程 IT229)</h3>
+                <div class="reminder-note">
+                    💡 <strong>注意事項：</strong>限於航班表定起飛時間前 48 小時至 1 小時內辦理
+                </div>
+                <div class="checkin-split">
+                    <div class="checkin-col">
+                        <strong>🎟️ 訂位代號：CE66SE</strong>
+                        晨、雲山、ㄏㄇ、姜、Mindy、Jason、萱、霞、仙
+                    </div>
+                    <div class="checkin-col">
+                        <strong>🎟️ 訂位代號：DCMYSX</strong>
+                        Ru、弘量、榕、BC、國庭、Mars、麥口
+                    </div>
+                </div>
+                <a href="https://sci.tigerairtw.com/zh-TW/login" target="_blank" class="checkin-btn">🔗 前往虎航自助報到頁面</a>
+            </div>
         </div>
     </div>
 </div>
 
 <footer>
-    © 2026 justfont 員工旅遊手冊
+    © 2026 遮放の員旅
 </footer>
 
 <script>
