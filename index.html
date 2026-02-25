@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 
     <style>
         /* 透過 jsDelivr 開源 CDN 載入 justfont 粉圓體 (jf-openhuninn) */
@@ -159,8 +159,9 @@
 
         .day-title {
             color: var(--primary-dark);
-            font-size: 22px;
+            font-size: 26px;
             margin: 0;
+            font-weight: bold;
         }
 
         .map-btn {
@@ -195,7 +196,8 @@
         }
 
         .time {
-            color: #555;
+            color: #000000; /* 改為深黑色 */
+            font-weight: bold; /* 加粗增強辨識度 */
             display: inline-block;
             min-width: 120px;
             flex-shrink: 0;
@@ -233,6 +235,16 @@
             margin: 0 0 12px 0;
             font-size: 18px;
             color: var(--primary-dark);
+            line-height: 1.4;
+        }
+
+        /* 房型細節字體縮小與換行 */
+        .room-detail {
+            display: block;
+            font-size: 14px;
+            color: #5a7a4f;
+            margin-top: 4px;
+            font-weight: normal;
         }
 
         .room-group {
@@ -446,8 +458,8 @@
     <div id="day1" class="day-content active">
         <div class="day-card">
             <div class="day-header">
-                <h2 class="day-title">Day 1：出發前往新潟</h2>
-                <a href="https://www.google.com/maps/dir/Niigata+Airport/Dormy+Inn+Niigata/" target="_blank" class="map-btn">🗺️ 查看本日 Google Maps 路線</a>
+                <h2 class="day-title">Day 1</h2>
+                <a href="https://www.google.com/maps/dir/Niigata+Airport/Dormy+Inn+Niigata/" target="_blank" class="map-btn">🗺️ 本日 Google Maps 路線</a>
             </div>
             <ul class="timeline">
                 <li>
@@ -469,7 +481,7 @@
                 🛌 <strong>住宿：</strong> <a href="https://dormy-hotels.com/dormyinn/hotels/niigata/" target="_blank">天然温泉 多宝の湯 Dormy Inn 新潟</a>
             </div>
             <div class="room-box">
-                <h3>🏨 第一天（單人房*17）</h3>
+                <h3>🏨 第一天<span class="room-detail">（單人房*17）</span></h3>
             </div>
             
             <div class="flight-checkin-box">
@@ -501,8 +513,8 @@
     <div id="day2" class="day-content">
         <div class="day-card">
             <div class="day-header">
-                <h2 class="day-title">Day 2：職人體驗與峽谷絕景</h2>
-                <a href="https://www.google.com/maps/dir/Dormy+Inn+Niigata/新潟県燕市大曲4330-1/燕市産業史料館/魚沼の里/清津峡渓谷トンネル/あぶらや燈千/" target="_blank" class="map-btn">🗺️ 查看本日 Google Maps 路線</a>
+                <h2 class="day-title">Day 2</h2>
+                <a href="https://www.google.com/maps/dir/Dormy+Inn+Niigata/新潟県燕市大曲4330-1/燕市産業史料館/魚沼の里/清津峡渓谷トンネル/あぶらや燈千/" target="_blank" class="map-btn">🗺️ 本日 Google Maps 路線</a>
             </div>
             <ul class="timeline">
                 <li><span class="time">08:30</span><div>飯店出發</div></li>
@@ -534,8 +546,8 @@
                 🛌 <strong>住宿：</strong> <a href="https://www.aburaya-tousen.co.jp/" target="_blank">あぶらや燈千 (和食)</a>
             </div>
             <div class="room-box">
-                <h3>🏨 第二天（二人房*2、四人房*2、五人房*1）</h3>
-                <div class="room-group">二人房：麥口、Mars</div>
+                <h3>🏨 第二天<span class="room-detail">（二人房*2、四人房*2、五人房*1）</span></h3>
+                <div class="room-group">二人房：Mars、麥口</div>
                 <div class="room-group">二人房：BC、國庭</div>
                 <div class="room-group">四人房：弘量、榕、Jason、Ru</div>
                 <div class="room-group">四人房：姜、仙、霞、麗子</div>
@@ -547,8 +559,8 @@
     <div id="day3" class="day-content">
         <div class="day-card">
             <div class="day-header">
-                <h2 class="day-title">Day 3：手作蕎麥麵與國寶參拜</h2>
-                <a href="https://www.google.com/maps/dir/あぶらや燈千/戸隠そば博物館とんくるりん/善光寺/長野駅/笹屋ホテル/" target="_blank" class="map-btn">🗺️ 查看本日 Google Maps 路線</a>
+                <h2 class="day-title">Day 3</h2>
+                <a href="https://www.google.com/maps/dir/あぶらや燈千/戸隠そば博物館とんくるりん/善光寺/長野駅/笹屋ホテル/" target="_blank" class="map-btn">🗺️ 本日 Google Maps 路線</a>
             </div>
             <ul class="timeline">
                 <li><span class="time">08:45</span><div>飯店出發</div></li>
@@ -562,8 +574,8 @@
                 🛌 <strong>住宿：</strong> <a href="https://www.sasaya.co.jp/" target="_blank">笹屋ホテル (和食)</a>
             </div>
             <div class="room-box">
-                <h3>🏨 第三天（二人房*3、三人房*1、四人房*2）</h3>
-                <div class="room-group">二人房：麥口、Mars</div>
+                <h3>🏨 第三天<span class="room-detail">（二人房*3、三人房*1、四人房*2）</span></h3>
+                <div class="room-group">二人房：Mars、麥口</div>
                 <div class="room-group">二人房：榕、BC</div>
                 <div class="room-group">二人房：霞、麗子</div>
                 <div class="room-group">四人房：Jason、Ru、弘量、國庭</div>
@@ -576,8 +588,8 @@
     <div id="day4" class="day-content">
         <div class="day-card">
             <div class="day-header">
-                <h2 class="day-title">Day 4：國寶名城與藝術巡禮</h2>
-                <a href="https://www.google.com/maps/dir/笹屋ホテル/松本城/松本市美術館/七草の湯/" target="_blank" class="map-btn">🗺️ 查看本日 Google Maps 路線</a>
+                <h2 class="day-title">Day 4</h2>
+                <a href="https://www.google.com/maps/dir/笹屋ホテル/松本城/松本市美術館/七草の湯/" target="_blank" class="map-btn">🗺️ 本日 Google Maps 路線</a>
             </div>
             <ul class="timeline">
                 <li><span class="time">08:30</span><div>飯店出發</div></li>
@@ -591,8 +603,8 @@
                 🛌 <strong>住宿：</strong> <a href="https://www.nanakusanoyu.net/" target="_blank">七草の湯</a>
             </div>
             <div class="room-box">
-                <h3>🏨 第四天（二人房*2、四人房*2、五人房*1）</h3>
-                <div class="room-group">二人房：麥口、Mars</div>
+                <h3>🏨 第四天<span class="room-detail">（二人房*2、四人房*2、五人房*1）</span></h3>
+                <div class="room-group">二人房：Mars、麥口</div>
                 <div class="room-group">二人房：BC、國庭</div>
                 <div class="room-group">四人房：Ru、Jason、弘量、榕</div>
                 <div class="room-group">四人房：晨、ㄏㄇ、霞、麗子</div>
@@ -604,8 +616,8 @@
     <div id="day5" class="day-content">
         <div class="day-card">
             <div class="day-header">
-                <h2 class="day-title">Day 5：賞櫻名所與滿載而歸</h2>
-                <a href="https://www.google.com/maps/dir/七草の湯/高田城址公園/新潟県長岡市柳原町3-3/新潟駅/Niigata+Airport/" target="_blank" class="map-btn">🗺️ 查看本日 Google Maps 路線</a>
+                <h2 class="day-title">Day 5</h2>
+                <a href="https://www.google.com/maps/dir/七草の湯/高田城址公園/新潟県長岡市柳原町3-3/新潟駅/Niigata+Airport/" target="_blank" class="map-btn">🗺️ 本日 Google Maps 路線</a>
             </div>
             <ul class="timeline">
                 <li><span class="time">08:00</span><div>飯店出發</div></li>
