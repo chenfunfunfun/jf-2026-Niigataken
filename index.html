@@ -266,13 +266,13 @@
             display: inline-block;
         }
 
-        /* 自助報到區塊樣式 */
+        /* 自助報到區塊樣式 (改為 #EBE27C 黃色系) */
         .flight-checkin-box {
-            background-color: #f1f8ff;
+            background-color: #fdfce8;
             border-radius: 8px;
             padding: 18px;
             margin-top: 25px;
-            border-left: 4px solid #74c0fc;
+            border-left: 4px solid #EBE27C;
             font-size: 15px;
             line-height: 1.6;
         }
@@ -280,13 +280,13 @@
         .flight-checkin-box h3 {
             margin: 0 0 12px 0;
             font-size: 18px;
-            color: #1864ab;
+            color: #7a7312;
         }
 
         .flight-checkin-box .reminder-note {
-            background: #e7f5ff;
-            color: #1864ab;
-            border-left: 3px solid #339af0;
+            background: #faf8d7;
+            color: #7a7312;
+            border-left: 3px solid #EBE27C;
             display: block;
             margin-top: 0;
             margin-bottom: 15px;
@@ -304,33 +304,62 @@
             background-color: #fff;
             padding: 12px;
             border-radius: 6px;
-            border: 1px dashed #74c0fc;
+            border: 1px dashed #EBE27C;
             font-size: 14.5px;
         }
 
         .checkin-col strong {
-            color: #1864ab;
-            display: block;
+            color: #7a7312;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin-bottom: 5px;
-            border-bottom: 1px solid #d0ebff;
+            border-bottom: 1px solid #f2eed5;
             padding-bottom: 5px;
+        }
+
+        /* 複製按鈕樣式 */
+        .copy-btn {
+            background-color: #fff;
+            border: 1px solid #EBE27C;
+            color: #7a7312;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'jf-openhuninn', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .copy-btn:hover {
+            background-color: #EBE27C;
+            color: #333;
+        }
+
+        .copy-btn.copied {
+            background-color: #87b377;
+            border-color: #87b377;
+            color: #fff;
         }
 
         .checkin-btn {
             display: block;
             text-align: center;
-            background-color: #339af0;
-            color: #fff !important;
+            background-color: #EBE27C;
+            color: #333 !important; /* 因為黃色較淺，文字改用深色 */
             text-decoration: none;
             padding: 12px 15px;
             border-radius: 8px;
             font-weight: bold;
             transition: background 0.2s;
             letter-spacing: 1px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .checkin-btn:hover {
-            background-color: #228be6;
+            background-color: #dcd261;
         }
 
         footer {
@@ -404,11 +433,17 @@
                 </div>
                 <div class="checkin-split">
                     <div class="checkin-col">
-                        <strong>🎟️ 訂位代號：CE66SE</strong>
+                        <strong>
+                            <span>🎟️ 訂位代號：CE66SE</span>
+                            <button class="copy-btn" onclick="copyCode('CE66SE', this)">複製 📋</button>
+                        </strong>
                         晨、雲山、ㄏㄇ、姜、Mindy、Jason、萱、霞、仙
                     </div>
                     <div class="checkin-col">
-                        <strong>🎟️ 訂位代號：DCMYSX</strong>
+                        <strong>
+                            <span>🎟️ 訂位代號：DCMYSX</span>
+                            <button class="copy-btn" onclick="copyCode('DCMYSX', this)">複製 📋</button>
+                        </strong>
                         Ru、弘量、榕、BC、國庭、Mars、麥口
                     </div>
                 </div>
@@ -546,11 +581,17 @@
                 </div>
                 <div class="checkin-split">
                     <div class="checkin-col">
-                        <strong>🎟️ 訂位代號：CE66SE</strong>
+                        <strong>
+                            <span>🎟️ 訂位代號：CE66SE</span>
+                            <button class="copy-btn" onclick="copyCode('CE66SE', this)">複製 📋</button>
+                        </strong>
                         晨、雲山、ㄏㄇ、姜、Mindy、Jason、萱、霞、仙
                     </div>
                     <div class="checkin-col">
-                        <strong>🎟️ 訂位代號：DCMYSX</strong>
+                        <strong>
+                            <span>🎟️ 訂位代號：DCMYSX</span>
+                            <button class="copy-btn" onclick="copyCode('DCMYSX', this)">複製 📋</button>
+                        </strong>
                         Ru、弘量、榕、BC、國庭、Mars、麥口
                     </div>
                 </div>
@@ -561,10 +602,11 @@
 </div>
 
 <footer>
-    © 2026 遮放の員旅
+    © 2026 遮放の員旅手冊
 </footer>
 
 <script>
+    // 切換日期分頁功能
     function showDay(dayId) {
         var contents = document.getElementsByClassName('day-content');
         for (var i = 0; i < contents.length; i++) {
@@ -578,6 +620,25 @@
         
         document.getElementById(dayId).classList.add('active');
         event.currentTarget.classList.add('active');
+    }
+
+    // 複製訂位代號功能
+    function copyCode(text, btn) {
+        // 使用剪貼簿 API 複製文字
+        navigator.clipboard.writeText(text).then(() => {
+            // 複製成功時的視覺回饋
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "已複製 ✔";
+            btn.classList.add("copied");
+            
+            // 2秒後恢復原狀
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove("copied");
+            }, 2000);
+        }).catch(err => {
+            alert("瀏覽器不支援自動複製，請手動選取複製喔！");
+        });
     }
 </script>
 
